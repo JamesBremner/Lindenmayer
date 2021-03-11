@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Lindenmayer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc_v83" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../bin/Lindenmayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc_v83" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../../bin/Lindenmayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc_v83" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="$(#windex)" />
+			<Add directory="$(#ravenset)" />
+			<Add directory="$(#boost)" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="boost_thread-mgw82-mt-d-x64-1_72" />
+			<Add directory="$(#boost.lib)" />
+		</Linker>
+		<Unit filename="../raven-set/cRunWatch.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
